@@ -60,14 +60,15 @@ Clone the repository:
 ```bash
 git clone https://github.com/JoeMarian/PharmaVision-An-End-to-End-DataOps-Analytics-Platform.git
 cd PharmaVision-An-End-to-End-DataOps-Analytics-Platform 
+```
 
 Install the dependencies:
-'''bash
+```bash
 pip install -r requirements.txt
-
+```
 Run the Streamlit app:
-'''bash
+```bash
 streamlit run app.py
-
+```
 
 Open in your browser at 👉 http://localhost:8501
