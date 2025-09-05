@@ -1,49 +1,73 @@
-# PharmaVision-An-End-to-End-DataOps-Analytics-Platform
+# PharmaVision: An End-to-End DataOps & Analytics Platform
 
-This project is a comprehensive solution for pharmaceutical data analysis, built as a dynamic Streamlit dashboard. It showcases an entire DataOps pipeline from raw data to actionable business intelligence and AI-driven insights.
+PharmaVision is a comprehensive solution for **pharmaceutical data analysis**, built as a dynamic **Streamlit dashboard**.  
+It showcases an entire **DataOps pipeline** — from raw data to actionable **business intelligence (BI)** and **AI-driven insights**.
 
-Features
-Data Ingestion & ETL: The pipeline begins with a robust ETL (Extract, Transform, Load) process that handles a sample pharma dataset. It automatically detects and cleans data, including removing duplicates and handling missing values, to ensure data quality.
+---
 
-Data Quality & Validation: A dedicated data quality panel provides key metrics such as missing values, row counts, and duplicate records. Simple validation rules are applied to identify and flag inconsistencies in the data.
+## Features
 
-Business Intelligence (BI): The interactive Streamlit dashboard offers various BI features for data exploration. Users can apply filters for drugs, regions, and dates to generate real-time visualizations like sales trends over time, top-performing drugs, and regional sales distribution.
+### 📥 Data Ingestion & ETL
+- Robust **ETL (Extract, Transform, Load)** process handles pharma datasets.  
+- Automatically detects and cleans data (duplicates removal, missing value handling).  
+- Ensures high **data quality** and consistency.
 
-AI/ML Insights: The project integrates several machine learning models to provide deeper analysis:
+### Data Quality & Validation
+- Dedicated **Data Quality Panel** with key metrics:
+  - Missing values
+  - Row counts
+  - Duplicate records  
+- Validation rules to flag inconsistencies.
 
-Sales Forecasting: Uses Prophet (with a Linear Regression fallback) to predict future sales trends.
+### Business Intelligence (BI)
+- Interactive **Streamlit dashboard** for exploration.  
+- Filters by **drugs, regions, and dates**.  
+- Real-time visualizations:
+  - Sales trends over time  
+  - Top-performing drugs  
+  - Regional sales distribution  
 
-Anomaly Detection: Employs Isolation Forest to automatically identify unusual spikes or dips in sales and adverse events.
+### AI/ML Insights
+- Integrated **machine learning models** for deeper analysis:
+  - **Sales Forecasting** → Prophet (with Linear Regression fallback).  
+  - **Anomaly Detection** → Isolation Forest for unusual spikes/dips.  
+  - **Drug Clustering** → K-Means based on sales & adverse events (risk segmentation).  
 
-Drug Clustering: Groups drugs based on sales and adverse events using K-Means clustering to identify potential risk categories.
+### Automated Reporting
+- Generate a **client-ready PDF report** with one click.  
+- Includes all **KPIs & insights** from the dashboard.  
 
-Automated Reporting: A unique feature of the dashboard is its ability to generate a client-ready PDF report with a single click, summarizing all key KPIs and insights.
+### Orchestration
+- **Prefect workflow** automates ETL + QC.  
+- Ensures the pipeline is **reliable and repeatable**.
 
-Orchestration: A Prefect workflow is included to automate the ETL and QC processes, ensuring the data pipeline is reliable and repeatable.
+---
 
-Technologies
-Data Analysis & Manipulation: Python, Pandas, NumPy
+## Technologies
 
-Visualization: Streamlit, Plotly
+- **Data Analysis & Manipulation**: Python, Pandas, NumPy  
+- **Visualization**: Streamlit, Plotly  
+- **Machine Learning**: Scikit-learn, Prophet, TensorFlow (optional LSTM)  
+- **Automation**: Prefect  
+- **Reporting**: ReportLab  
 
-Machine Learning: Scikit-learn, Prophet, TensorFlow (for optional LSTM)
+---
 
-Automation: Prefect
+## How to Run
 
-Reporting: ReportLab
-
-How to Run
 Clone the repository:
 
-git clone [https://github.com/JoeMarian/PharmaVision-An-End-to-End-DataOps-Analytics-Platform.git](https://github.com/JoeMarian/PharmaVision-An-End-to-End-DataOps-Analytics-Platform.git)
-cd PharmaVision-An-End-to-End-DataOps-Analytics-Platform
+```bash
+git clone https://github.com/JoeMarian/PharmaVision-An-End-to-End-DataOps-Analytics-Platform.git
+cd PharmaVision-An-End-to-End-DataOps-Analytics-Platform 
 
-Install the required packages:
-
+Install the dependencies:
+'''bash
 pip install -r requirements.txt
 
-Run the Streamlit application:
-
+Run the Streamlit app:
+'''bash
 streamlit run app.py
 
-You can now view the dashboard in your browser at http://localhost:8501.
+
+Open in your browser at 👉 http://localhost:8501
